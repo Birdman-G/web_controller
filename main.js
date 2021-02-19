@@ -10,5 +10,15 @@ for (let o of element_array) {
             o.setAttribute("class", "element");
             o.isclicked = false;
         }
-    })
+    });
+    o.addEventListener("mouseenter", (e)=> {
+        if (o.isclicked === false) {
+            o.setAttribute("class", "element-hover");
+            o.isclicked = true;
+        }
+        else{
+            o.setAttribute("class", "element");
+            o.isclicked = false;
+        }
+    });
 }
