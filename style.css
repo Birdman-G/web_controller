@@ -1,0 +1,94 @@
+.container {
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 2px;
+    border: 2px solid green;
+    position: fixed;
+    bottom: 0;
+    user-select: none;
+}
+
+.sub-container {
+    padding: 2px;
+    border: 2px solid green;
+    height: 200px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: stretch;
+}
+
+.sub-container .element:nth-child(n + 2):not(:last-child) {
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.sub-container .element-hover:nth-child(n + 2):not(:last-child) {
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.sub-container .element:hover{
+    border: 2px solid black;
+    position: relative;
+    color: black;
+    bottom: 5%;
+}
+/* .sub-containe .element-hover:hover {
+    border: 1px solid yellowgreen;
+    flex: 1;
+    font-family: "SimSun";
+    font-size: 1.5em;
+    color: darkolivegreen;
+    writing-mode: vertical-lr;
+    text-indent: 0.5em;
+} */
+.sub-container .element-hover {
+    flex: 1;
+    font-family: "SimSun";
+    font-size: 1.5em;
+    writing-mode: vertical-lr;
+    text-indent: 0.5em;
+    border: 2px solid black;
+    color: black;
+    animation: popup .2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    /* animation-timing-function: cubic-bezier(0.1, 0.7, 0.8, 0.9); */
+}
+@keyframes popup {
+    from {
+        position: relative;
+        bottom: 5%;
+        left: 0%;
+    }
+    25% {
+        position: relative;
+        bottom: 5%;
+        left: .25%;
+    }
+    50% {
+        position: relative;
+        bottom: 5%;
+        left: .5%;
+    }
+    75% {
+        position: relative;
+        bottom: 5%;
+        left: .75%;
+    }   
+    to {
+        position: relative;
+        bottom: 5%;
+        left: 1%;
+    }
+}
+.element {
+    border: 1px solid yellowgreen;
+    flex: 1;
+    font-family: "SimSun";
+    font-size: 1.5em;
+    color: darkolivegreen;
+    writing-mode: vertical-lr;
+    text-indent: 0.5em;
+}
