@@ -47,33 +47,10 @@ function add_content_node(root, content) {
 }
 
 function insert_new_node(root, content) {
-    if (root.className === "content-node") {
-        insert_new_node(root.parentNode, content);
-    } else if (root.className === "node") {
-        let flag = get_random();
-        if (flag < .2) {
-            let new_node = create_node();
-            insert_new_node(new_node, content);
-        } else {
-            let new_node = create_content_node(content);
-            new_node.textContent = content;
-            root.appendChild(new_node);
-        }
-    }
+    
 }
 
 function delete_node(root, id) {
-    if (root === undefined) {
-        return;
-    }
-    for (let node of root.children) {
-        if (node.id === id) {
-            root.removeChild(node);
-            return;
-        } else {
-            delete_node(node, id);
-        }
-    }
 }
 for (let o of element_array) {
     o.isclicked = false;
